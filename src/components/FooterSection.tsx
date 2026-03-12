@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Terminal } from "lucide-react";
 
 const FooterSection = () => {
   return (
@@ -10,27 +11,27 @@ const FooterSection = () => {
         transition={{ duration: 0.6 }}
         className="mb-16"
       >
-        <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-body">Get in Touch</p>
+        <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-mono">Connect</p>
         <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-          Let's work<br />
-          <span className="text-gradient">together</span>
+          Let's talk<br />
+          <span className="text-gradient">security</span>
         </h2>
-        <a
-          href="mailto:hello@alexmorgan.dev"
-          className="inline-block text-lg text-secondary-foreground hover:text-primary transition-colors duration-300 mt-4 font-light"
-        >
-          hello@alexmorgan.dev
-        </a>
+
+        <div className="mt-8 flex items-center gap-3 px-4 py-3 bg-card rounded-lg border border-border max-w-sm font-mono">
+          <Terminal className="w-4 h-4 text-primary flex-shrink-0" />
+          <span className="text-primary text-sm">$</span>
+          <span className="text-muted-foreground text-sm">echo "hello" | mail me</span>
+        </div>
       </motion.div>
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pt-8 border-t border-border">
-        <p className="text-muted-foreground text-sm">© 2026 Alex Morgan. All rights reserved.</p>
+        <p className="text-muted-foreground text-sm font-mono">© 2026 // All rights reserved.</p>
         <div className="flex gap-8">
-          {["Twitter", "LinkedIn", "Dribbble", "GitHub"].map((link) => (
+          {["GitHub", "LinkedIn", "HackTheBox", "TryHackMe"].map((link) => (
             <a
               key={link}
               href="#"
-              className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm"
+              className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-mono"
             >
               {link}
             </a>
