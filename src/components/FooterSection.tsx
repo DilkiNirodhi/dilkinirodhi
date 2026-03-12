@@ -25,7 +25,7 @@ const FooterSection = () => {
       </motion.div>
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pt-8 border-t border-border">
-        <p className="text-muted-foreground text-sm font-mono">© 2026 // All rights reserved.</p>
+        <p className="text-muted-foreground text-sm font-mono">© 2026 Dilki Nirodhi // All rights reserved.</p>
         <div className="flex gap-8">
           {["GitHub", "LinkedIn", "HackTheBox", "TryHackMe"].map((link) => (
             <a
