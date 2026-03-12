@@ -1,4 +1,12 @@
 import { motion } from "framer-motion";
+import { Shield, Bug, Lock, Search } from "lucide-react";
+
+const skills = [
+  { icon: Shield, label: "Network Security" },
+  { icon: Bug, label: "Penetration Testing" },
+  { icon: Lock, label: "Cryptography" },
+  { icon: Search, label: "Threat Hunting" },
+];
 
 const AboutSection = () => {
   return (
@@ -10,11 +18,23 @@ const AboutSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-body">About</p>
+          <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3 font-mono">About Me</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-8">
-            Building at the<br />
-            <span className="text-gradient">intersection</span>
+            The hacker<br />
+            <span className="text-gradient">mindset</span>
           </h2>
+
+          <div className="grid grid-cols-2 gap-4 mt-8">
+            {skills.map((skill) => (
+              <div
+                key={skill.label}
+                className="flex items-center gap-3 p-3 bg-card rounded-lg border border-border"
+              >
+                <skill.icon className="w-4 h-4 text-primary flex-shrink-0" />
+                <span className="text-sm text-secondary-foreground">{skill.label}</span>
+              </div>
+            ))}
+          </div>
         </motion.div>
 
         <motion.div
@@ -25,21 +45,21 @@ const AboutSection = () => {
           className="space-y-6"
         >
           <p className="text-secondary-foreground text-lg leading-relaxed font-light">
-            I'm a creative developer specializing in immersive digital experiences. With over 8 years in the industry, I bridge the gap between design and engineering.
+            I'm a cybersecurity enthusiast on a mission to understand and defend against evolving digital threats. From CTF competitions to real-world pentests, I live and breathe security.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            My work spans brand identity, web applications, and interactive installations. I believe great design is invisible — it simply works.
+            My journey spans vulnerability research, malware analysis, and building defensive tools. I believe in ethical hacking as a force for good — finding weaknesses before the adversaries do.
           </p>
 
           <div className="grid grid-cols-2 gap-8 pt-8 border-t border-border">
             {[
-              { label: "Years Experience", value: "8+" },
-              { label: "Projects Delivered", value: "50+" },
-              { label: "Happy Clients", value: "30+" },
-              { label: "Awards Won", value: "12" },
+              { label: "CTFs Competed", value: "40+" },
+              { label: "CVEs Discovered", value: "5" },
+              { label: "Certifications", value: "OSCP" },
+              { label: "Bugs Reported", value: "100+" },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="font-display text-3xl font-bold text-primary">{stat.value}</p>
+                <p className="font-display text-3xl font-bold text-primary text-glow">{stat.value}</p>
                 <p className="text-muted-foreground text-sm mt-1">{stat.label}</p>
               </div>
             ))}
