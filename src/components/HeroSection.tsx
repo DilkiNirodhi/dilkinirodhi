@@ -20,8 +20,8 @@ const HeroSection = () => {
           </p>
         </div>
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight mb-8">
-          Securing the<br />
-          <span className="text-gradient text-glow">digital frontier</span>
+          Dilki<br />
+          <span className="text-gradient text-glow">Nirodhi</span>
         </h1>
         <p className="text-secondary-foreground max-w-lg text-lg leading-relaxed font-light">
           Penetration tester, threat hunter, and security researcher dedicated to making the digital world safer — one vulnerability at a time.
